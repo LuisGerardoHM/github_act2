@@ -21,4 +21,4 @@ length(muestra)
 
 También puedo cálcular la media (promedio) de la muestra.
 
-La media es 0.1061242
+La media es -0.0175198
