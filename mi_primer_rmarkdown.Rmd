@@ -3,7 +3,7 @@ title: "Mi primer R Markdown"
 output: github_document
 ---
 
-Hola! soy un archivo R Markdown que se convertirá en un Markdown por el bien de GitHub.
+Hola! soy un archivo R Markdown que se convertirá en un Markdown por el bien de GitHub
 
 # Sección 1
 

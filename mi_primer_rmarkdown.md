@@ -1,7 +1,8 @@
 Mi primer R Markdown
 ================
 
-Hola! soy un archivo R Markdown
+Hola! soy un archivo R Markdown que se convertirá en un Markdown por el
+bien de GitHub
 
 # Sección 1
 
@@ -20,4 +21,4 @@ length(muestra)
 
 También puedo cálcular la media (promedio) de la muestra.
 
-La media es 0.1639047
+La media es 0.1061242
