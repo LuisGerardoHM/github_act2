@@ -1,0 +1,38 @@
+---
+title: "R Markdown para crear gráficos"
+author: "Luis E Segura"
+date: "Mayo 22, 2023"
+output: html_document
+---
+
+Este es un documento R Markdown donde creamos gráficos usando la función ``ggplot()``.
+
+Primero, cargamos el paquete necesario para nuestra sesión.
+```{r cargar_paquete}
+library(tidyverse)
+```
+
+# Datos
+Creamos un dataframe llamado df_grafico, el cual contiene una variable de peso y otra de talla que se crearon tomando una muestra de 1000 observaciones de una distribución normal con media de 80 y 1.70, respectivamente, y una desviación estándar de 1 y 0.1, respectivamente. También creamos una variable de IMC definida como peso sobre talla al cuadrado.
+```{r crear_dataframe}
+# set seed para reproducibilidad
+set.seed(1)
+
+# creando dataframe con peso, talla e imc
+df_grafico <- tibble(peso = rnorm(1000, 80, sd = 1),
+                     talla = rnorm(1000, 1.70, sd = .1), 
+                     imc = peso / talla ^ 2)
+```
+
+# Gráficos
+Creamos un histograma de la variable peso.
+```{r histograma_peso}
+ggplot(df_grafico, aes(x = peso)) + 
+  geom_histogram()
+```
+
+También creamos un scatterplot de con la variable de peso en el eje x e IMC en el eje y.
+```{r scatter_peso_imc}
+ggplot(df_grafico, aes(x = peso, y = imc)) + 
+  geom_point()
+```
